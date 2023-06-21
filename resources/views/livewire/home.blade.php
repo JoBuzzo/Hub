@@ -2,7 +2,6 @@
     <div class="m-auto flex flex-col items-center justify-center">
         <div class="flex items-center gap-4 justify-center p-2 max-xl:flex-col max-sm:w-[360px]">
             <img class="object w-[500px] rounded-t-lg " src="./images/hub_frente.png" alt="">
-
             <div
                 class="flex flex-col text-start w-[680px] max-md:w-full h-full items-start justify-start mt-4 p-2 leading-normal">
                 <div class="flex mb-3 gap-2">
@@ -27,7 +26,7 @@
             </div>
         </div>
 
-        <div class="max-xl:w-[700px] w-[1250px] max-sm:w-[360px] flex flex-col pt-7">
+        <div id="parceiros" class="max-xl:w-[700px] w-[1250px] max-sm:w-[360px] flex flex-col pt-7">
             <div class="flex mb-3 gap-2 w-full">
                 <div class=" flex-start border border-2 border-[#04DBFD] "></div>
                 <h1 class=" text-2xl font-bold tracking-tight text-gray-900">Parceiros</h1>

@@ -1,7 +1,7 @@
 <nav x-data="{ open: false }" class="bg-white border-gray-200 w-full z-50 border-b sticky top-0">
     <!-- Primary Navigation Menu -->
     <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16 border border-red-300">
+        <div class="flex justify-between items-center h-16">
             <div class="flex">
                 <!-- Logo -->
                 <div class="flex items-center shrink-0">
@@ -13,10 +13,10 @@
             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex items-center">
                 <!-- Navigation Links -->
                 <livewire:nav-projects/>
-                <a href="#">Sobre</a>
-                <a href="#">Parceiros</a>
-                <a href="#">Imagens</a>
-                <a href="#">Contato</a>
+                <a href="#" class="font-semibold text-lg hover:text-[#04DBFD]">Sobre</a>
+                <a href="#parceiros"class="font-semibold text-lg hover:text-[#04DBFD]">Parceiros</a>
+                <a href="#imagens"class="font-semibold text-lg hover:text-[#04DBFD]">Imagens</a>
+                <a href="#contato"class="font-semibold text-lg hover:text-[#04DBFD]">Contato</a>
 
             </div>
 
@@ -91,10 +91,17 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <!-- Responsive Settings Options -->
-        @auth()
-            <div class="pt-4 pb-1 border-t border-gray-200">
-                <div class="px-4">
-                    <div class="text-base font-medium text-gray-800">{{ Auth::user()->name }}</div>
+        <div class="pt-4 pb-1 border-t border-gray-200">
+            <div class="mt-3 space-y-1 px-6 py-4 flex flex-col items-start gap-1.5">
+                <livewire:nav-projects/>
+                <a href="#" class="font-semibold text-lg hover:text-[#04DBFD]">Sobre</a>
+                <a href="#parceiros"class="font-semibold text-lg hover:text-[#04DBFD]">Parceiros</a>
+                <a href="#imagens"class="font-semibold text-lg hover:text-[#04DBFD]">Imagens</a>
+                <a href="#contato"class="font-semibold text-lg hover:text-[#04DBFD]">Contato</a>
+            </div>
+            @auth()
+                <div class="px-4  border-t-2 border-gray-100 mt-4">
+                    <div class="text-base font-medium text-gray-800 mt-2">{{ Auth::user()->name }}</div>
                     <div class="text-sm font-medium text-gray-500">{{ Auth::user()->email }}</div>
                 </div>
 
@@ -103,24 +110,12 @@
                         {{ __('Profile') }}
                     </x-responsive-nav-link>
 
-                    <x-responsive-nav-link :href="route('create-project')">
-                        {{ __('Adicionar Projeto') }}
-                    </x-responsive-nav-link>
-
-                    <x-responsive-nav-link :href="route('create-image')">
-                        {{ __('Adicionar Imagem') }}
-                    </x-responsive-nav-link>
-
-                    <x-responsive-nav-link :href="route('create-partner')">
-                        {{ __('Adicionar Parceiro') }}
-                    </x-responsive-nav-link>
-
                     <x-responsive-nav-link :href="route('index-projects')">
                         {{ __('Projetos') }}
                     </x-responsive-nav-link>
 
                     <x-responsive-nav-link :href="route('index-images')">
-                        {{ __('Images') }}
+                        {{ __('Imagens') }}
                     </x-responsive-nav-link>
 
                     <x-responsive-nav-link :href="route('index-partners')">
@@ -138,7 +133,8 @@
                         </x-responsive-nav-link>
                     </form>
                 </div>
-            </div>
-        @endauth
+            @endauth
+
+        </div>
     </div>
 </nav>
