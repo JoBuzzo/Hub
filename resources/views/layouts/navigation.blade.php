@@ -43,16 +43,16 @@
                             {{ __('Perfil') }}
                         </x-dropdown-link>
 
-                        <x-dropdown-link :href="route('create-project')">
-                            {{ __('Adicionar Projeto') }}
+                        <x-dropdown-link :href="route('index-projects')">
+                            {{ __('Projetos') }}
                         </x-dropdown-link>
 
-                        <x-dropdown-link :href="route('create-partner')">
-                            {{ __('Adicionar Parceiro') }}
+                        <x-dropdown-link :href="route('index-partners')">
+                            {{ __('Parceiros') }}
                         </x-dropdown-link>
 
-                        <x-dropdown-link :href="route('create-image')">
-                            {{ __('Adicionar Imagem') }}
+                        <x-dropdown-link :href="route('index-images')">
+                            {{ __('Imagens') }}
                         </x-dropdown-link>
 
                         <!-- Authentication -->

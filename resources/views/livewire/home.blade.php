@@ -1,5 +1,5 @@
 <div class="max-w-full justify-center items-center pt-7">
-    <div class="m-auto flex flex-col items-center justify-center  ">
+    <div class="m-auto flex flex-col items-center justify-center">
         <div class="flex items-center gap-4 justify-center p-2 max-xl:flex-col max-sm:w-[360px]">
             <img class="object w-[500px] rounded-t-lg " src="./images/hub_frente.png" alt="">
 

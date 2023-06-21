@@ -26,7 +26,7 @@ Route::get('/create-project', CreateProject::class)->name('create-project');
 Route::get('projects', IndexProjects::class)->name('index-projects');
 
 Route::get('/create-image', CreateImage::class)->name('create-image');
-Route::get('/images', IndexImages::class)->name('index-images');
+Route::get('/photos', IndexImages::class)->name('index-images');
 
 Route::get('/create-partner', CreatePartner::class)->name('create-partner');
 Route::get('/partners', IndexPartners::class)->name('index-partners');
