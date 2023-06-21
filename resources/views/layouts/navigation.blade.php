@@ -12,10 +12,12 @@
             </div>
             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex items-center">
                 <!-- Navigation Links -->
-                <a>
-                    Inicio
-                </a>
                 <livewire:nav-projects/>
+                <a href="#">Sobre</a>
+                <a href="#">Parceiros</a>
+                <a href="#">Imagens</a>
+                <a href="#">Contato</a>
+
             </div>
 
             <!-- Settings Dropdown -->
