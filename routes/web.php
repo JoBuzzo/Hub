@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', Home::class);
+Route::get('/', Home::class)->name('home');
 Route::get('/create-project', CreateProject::class)->name('create-project');
 Route::get('projects', IndexProjects::class)->name('index-projects');
 
