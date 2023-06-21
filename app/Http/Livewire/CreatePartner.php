@@ -9,7 +9,7 @@ use Livewire\WithFileUploads;
 class CreatePartner extends Component
 {
     use WithFileUploads;
-    
+
     public function render()
     {
         return view('livewire.create-partner');
@@ -30,6 +30,7 @@ class CreatePartner extends Component
             'image' => $nameFile,
         ]);
 
+        $this->reset();
         session()->flash('msg', 'Parceiria adicionada com sucesso.');
     }
 }

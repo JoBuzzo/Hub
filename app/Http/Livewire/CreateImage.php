@@ -32,6 +32,7 @@ class CreateImage extends Component
             'image' => $nameFile,
         ]);
 
+        $this->reset();
         session()->flash('msg', 'Imagem adicionada com sucesso.');
     }
 }

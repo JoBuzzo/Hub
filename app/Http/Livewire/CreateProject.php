@@ -14,7 +14,7 @@ class CreateProject extends Component
         return view('livewire.create-project');
     }
 
-    
+
     public function create()
     {
         $this->validate([
@@ -26,6 +26,8 @@ class CreateProject extends Component
             'name' => $this->name,
             'url' => $this->url,
         ]);
+
+        $this->reset();
         session()->flash('msg', 'Projeto adicionado com sucesso.');
     }
 
@@ -36,7 +38,7 @@ class CreateProject extends Component
     ];
 
     public function updated($propertyName)
-    {   
+    {
         $this->validateOnly($propertyName, [
             'url' => 'required|string',
             'name' => 'required|string',

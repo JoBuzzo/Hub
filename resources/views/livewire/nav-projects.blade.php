@@ -39,9 +39,9 @@
             :id="$id('dropdown-button')" style="display: none;"
             class="absolute left-0 z-40 w-40 mt-2 bg-white rounded-md shadow-md">
             @foreach ($projects as $project)
-                <div class="flex">
+                <div class="flex ">
                     <a href="{{ $project->url }}" target="_blank"
-                        class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left text-sm hover:bg-gray-50 disabled:text-gray-500">
+                        class="hover:bg-gray-100 flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left text-sm  disabled:text-gray-500">
                         {{ $project->name }}
                     </a>
                 </div>

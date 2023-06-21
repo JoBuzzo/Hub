@@ -42,7 +42,7 @@
             <div class="flex snap-center overflow-x-scroll gap-4">
                 @foreach($partners as $partner)
                     <div class="relative h-80 ">
-                        <img class="max-w-sm h-80 mb-2 rounded-lg object-cover " src="{{$partner->image}}" alt="">
+                        <img class="max-w-sm h-80 mb-2 rounded-lg object-scale-down " src="{{$partner->image}}" alt="">
                     </div>
                 @endforeach
             </div>
@@ -56,7 +56,7 @@
             <div class="flex snap-center overflow-x-scroll">
                 @foreach($images as $image)
                     <div class="relative h-80 ">
-                        <img class="max-w-sm h-80 mb-2 ml-2 rounded-lg object-cover " src="{{$image->image}}"
+                        <img class="max-w-sm h-80 mb-2 ml-2 rounded-lg object-scale-down " src="{{$image->image}}"
                              alt="">
                     </div>
                 @endforeach
