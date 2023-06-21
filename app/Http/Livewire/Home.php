@@ -11,8 +11,6 @@ class Home extends Component
 {
     public function render()
     {
-        auth()->login(User::first());
-
         $partners = Partner::all();
         $images = Image::all();
 
