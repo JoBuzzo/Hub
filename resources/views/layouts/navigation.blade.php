@@ -1,7 +1,7 @@
-<nav x-data="{ open: false }" class="bg-white border-gray-200 w-full z-50 border-b sticky top-0">
+<nav x-data="{ open: false }" class="sticky top-0 z-50 w-full p-3 bg-white border-b border-gray-200">
     <!-- Primary Navigation Menu -->
     <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
+        <div class="flex items-center justify-between h-16">
             <div class="flex">
                 <!-- Logo -->
                 <div class="flex items-center shrink-0">
@@ -10,7 +10,7 @@
                     </a>
                 </div>
             </div>
-            <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex items-center">
+            <div class="items-center hidden space-x-8 sm:-my-px md:ml-10 md:flex">
                 <!-- Navigation Links -->
                 <livewire:nav-projects/>
                 <a href="#" class="font-semibold text-lg hover:text-[#04DBFD]">Sobre</a>
@@ -22,7 +22,7 @@
 
             <!-- Settings Dropdown -->
             @auth()
-                <div class="hidden sm:flex sm:items-center sm:ml-6">
+                <div class="hidden md:flex sm:items-center sm:ml-6">
                     <x-dropdown align="right" width="48">
                         <x-slot name="trigger">
                             <button
@@ -55,6 +55,10 @@
                             <x-dropdown-link :href="route('index-images')">
                                 {{ __('Imagens') }}
                             </x-dropdown-link>
+                            
+                            <x-dropdown-link :href="route('index-users')">
+                                {{ __('Usuários') }}
+                            </x-dropdown-link>
 
                             <!-- Authentication -->
                             <form method="POST" action="{{ route('logout') }}">
@@ -73,7 +77,7 @@
             @endauth
 
             <!-- Hamburger -->
-            <div class="flex items-center -mr-2 sm:hidden">
+            <div class="flex items-center -mr-2 md:hidden">
                 <button @click="open = ! open"
                         class="inline-flex items-center justify-center p-2 text-gray-400 transition duration-150 ease-in-out rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500">
                     <svg class="w-6 h-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
@@ -100,8 +104,8 @@
                 <a href="#contato"class="font-semibold text-lg hover:text-[#04DBFD]">Contato</a>
             </div>
             @auth()
-                <div class="px-4  border-t-2 border-gray-100 mt-4">
-                    <div class="text-base font-medium text-gray-800 mt-2">{{ Auth::user()->name }}</div>
+                <div class="px-4 mt-4 border-t-2 border-gray-100">
+                    <div class="mt-2 text-base font-medium text-gray-800">{{ Auth::user()->name }}</div>
                     <div class="text-sm font-medium text-gray-500">{{ Auth::user()->email }}</div>
                 </div>
 
@@ -120,6 +124,10 @@
 
                     <x-responsive-nav-link :href="route('index-partners')">
                         {{ __('Parceiros') }}
+                    </x-responsive-nav-link>
+                    
+                    <x-responsive-nav-link :href="route('index-users')">
+                        {{ __('Usuários') }}
                     </x-responsive-nav-link>
 
                     <!-- Authentication -->

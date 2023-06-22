@@ -21,7 +21,7 @@
         x-on:focusin.window="! $refs.panel.contains($event.target) && close()" x-id="['dropdown-button']" class="relative">
         <!-- Button -->
         <button x-ref="button" x-on:click="toggle()" :aria-expanded="open" :aria-controls="$id('dropdown-button')"
-            type="button" class="flex items-center gap-1.5 bg-white group font-semibold text-lg hover:text-[#04DBFD]">
+            type="button" class="flex items-center gap-1.5 bg-transparent group font-semibold text-lg hover:text-[#04DBFD]">
             Projetos
 
             <!-- Heroicon: chevron-down -->
