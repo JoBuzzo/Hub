@@ -18,7 +18,7 @@
     <body class="font-sans antialiased text-gray-900">
         <div class="flex flex-col items-center min-h-screen pt-6 bg-gray-100 sm:justify-center sm:pt-0">
             <div>
-                <a href="/">
+                <a href="{{ route('home') }}">
                     <img class="h-24" src="{{asset('images/hub_logo_preta.png')}}" alt="">
                 </a>
             </div>

@@ -24,8 +24,8 @@ return new class extends Migration
 
 
         User::create([
-            'name' => "João Lucas Buzzo",
-            'email' => "joaolucas.buzzo@gmail.com",
+            'name' => "Alex Polleto",
+            'email' => "alex.poletto@fema.edu.br",
             'password' => '12345678'
         ]);
     }
